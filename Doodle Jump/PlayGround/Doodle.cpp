@@ -85,10 +85,10 @@ void Doodle::Update()
 	auto _platformBlock = OBJECTMANAGER->FindObjects(ObjectType::Block, L"Block");	//FindObject는 GameObject 포인터 타입 리턴, FindObjects는 GameObject 포인터 타입 벡터 리턴
 
 	for (auto _block : _platformBlock) {
-		/*if (pObj->GetActive())
-			continue;*/
+		if (!_block)
+			continue;
 
-		auto collideBlock = dynamic_cast<PlatformBlock*>(_block);
+		auto _collideBlock = dynamic_cast<PlatformBlock*>(_block);
 
 		if (_doodlePos.x > _block->GetPosition().x - _block->GetSize().x / 2 && _doodlePos.x < _block->GetPosition().x + _block->GetSize().x / 2)	//두들의 x좌표가 블록의 x 범위 내부에 있다면
 		{
@@ -97,7 +97,6 @@ void Doodle::Update()
 				if (_gravity > 0)
 				{
 					_gravity = -70.0f;
-					collideBlock->SetActive(false);
 				}
 			}
 		}
@@ -108,8 +107,8 @@ void Doodle::Update()
 
 void Doodle::Render()
 {
-	_D2DRenderer->FillRectangle(_rect, D2DRenderer::DefaultBrush::White);			// 채우기
-	_D2DRenderer->DrawRectangle(_rect, D2DRenderer::DefaultBrush::Black, 1.0f);		// 라인
+	//_D2DRenderer->FillRectangle(_rect, D2DRenderer::DefaultBrush::White);			// 채우기
+	//_D2DRenderer->DrawRectangle(_rect, D2DRenderer::DefaultBrush::Black, 1.0f);		// 라인
 
 	if (_isLeft)
 	{

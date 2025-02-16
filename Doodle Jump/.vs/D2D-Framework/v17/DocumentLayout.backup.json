@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\Doodle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\Platform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,8 +15,16 @@
       "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\PlayGround.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\Doodle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\Doodle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\PlayGround.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\PlayGround.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|solutionrelative:PlayGround\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9DB61177-1E7B-46A0-B7BD-277EB0314F87}|D2D-Framework.vcxproj|C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Platform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -34,20 +46,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "PlayGround.h",
+              "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\PlayGround.h",
+              "RelativeDocumentMoniker": "PlayGround\\PlayGround.h",
+              "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\PlayGround.h",
+              "RelativeToolTip": "PlayGround\\PlayGround.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:13:21.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bullet.cpp",
+              "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Bullet.cpp",
+              "RelativeDocumentMoniker": "PlayGround\\Bullet.cpp",
+              "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Bullet.cpp",
+              "RelativeToolTip": "PlayGround\\Bullet.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-02-16T04:10:01.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Doodle.h",
+              "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.h",
+              "RelativeDocumentMoniker": "PlayGround\\Doodle.h",
+              "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.h",
+              "RelativeToolTip": "PlayGround\\Doodle.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-02-16T04:02:00.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Doodle.cpp",
               "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.cpp",
               "RelativeDocumentMoniker": "PlayGround\\Doodle.cpp",
               "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Doodle.cpp",
               "RelativeToolTip": "PlayGround\\Doodle.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAADwv4AAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAGIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T03:52:17.639Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Platform.h",
               "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Platform.h",
               "RelativeDocumentMoniker": "PlayGround\\Platform.h",
@@ -55,31 +104,30 @@
               "RelativeToolTip": "PlayGround\\Platform.h",
               "ViewState": "AgIAAAMAAAAAAAAAAADwvyEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-02-16T03:37:51.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T03:37:51.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PlayGround.cpp",
               "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\PlayGround.cpp",
               "RelativeDocumentMoniker": "PlayGround\\PlayGround.cpp",
               "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\PlayGround.cpp",
               "RelativeToolTip": "PlayGround\\PlayGround.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAABEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T03:36:30.958Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Platform.cpp",
               "DocumentMoniker": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Platform.cpp",
               "RelativeDocumentMoniker": "PlayGround\\Platform.cpp",
               "ToolTip": "C:\\Users\\heech\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\repo\\Doodle Jump\\PlayGround\\Platform.cpp",
               "RelativeToolTip": "PlayGround\\Platform.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEQAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-16T03:32:25.875Z",
               "EditorCaption": ""
