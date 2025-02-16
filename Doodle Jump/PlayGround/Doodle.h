@@ -34,5 +34,6 @@ public:
 	Animation* _doodleAnimation;
 
 	Vector2 _doodlePos;
+	bool isUp;
 };
 

@@ -23,12 +23,15 @@ public:
 
 	FloatRect _gaugeRect;
 	Vector2 GetSize() { return _size; };
+
+	Image* _blockImage1;
 };
 
-class PlatformBlock : public Platform
+class PlatformBlock : public GameObject
 {
 public:
 	PlatformBlock();
+	PlatformBlock(int a);
 	virtual ~PlatformBlock();
 
 	void Init() override;
@@ -50,7 +53,7 @@ public:
 
 	void Init(int a);
 
-	//Image* _blockImage;
+	Image* _blockImage;
 	//Animation* _blockAnimation;
 };
 

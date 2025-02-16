@@ -17,7 +17,7 @@ void Doodle::Init()
 {
 	_name = L"Doodle";
 	_position = Vector2(WINSIZEX / 2, WINSIZEY -100);
-	_size = Vector2(60, 90);
+	_size = Vector2(60, 60);
 	_rect = RectMakePivot(_position, _size, Pivot::Center);
 	_active = true;
 
@@ -26,13 +26,13 @@ void Doodle::Init()
 	_doodleLeft = IMAGEMANAGER->AddImage(L"Doodle_Left", L"Resources/doodle_left.png");
 	_doodleRight = IMAGEMANAGER->AddImage(L"Doodle_Right", L"Resources/doodle_right.png");
 
-	_doodleAnimation = new Animation();
-	_doodleAnimation->Init(_doodleLeft->GetWidth(), _doodleLeft->GetHeight(), _doodleLeft->GetFrameSize().x, _doodleLeft->GetFrameSize().y);
-	_doodleAnimation->SetPlayFrame(0, 1, false, true);
-	_doodleAnimation->SetFPS(10);	// 조정하면서 살펴보기
-	_doodleAnimation->Start();		// 이거 안 하면 시작 안 함
+	//_doodleAnimation = new Animation();
+	//_doodleAnimation->Init(_doodleLeft->GetWidth(), _doodleLeft->GetHeight(), _doodleLeft->GetFrameSize().x, _doodleLeft->GetFrameSize().y);
+	//_doodleAnimation->SetPlayFrame(0, 1, false, true);
+	//_doodleAnimation->SetFPS(10);	// 조정하면서 살펴보기
+	//_doodleAnimation->Start();		// 이거 안 하면 시작 안 함
 
-	_isLeft = true;
+	_isLeft = true;	
 }
 
 void Doodle::Release()
@@ -51,12 +51,12 @@ void Doodle::Update()
 
 	if (KEYMANAGER->IsStayKeyDown(VK_LEFT))
 	{
-		Move(Vector2(-10, 0), 10);
+		Move(Vector2(-20, 0), 10);
 		_isLeft = true;
 	}
 	if (KEYMANAGER->IsStayKeyDown(VK_RIGHT))
 	{
-		Move(Vector2(10, 0), 10);
+		Move(Vector2(20, 0), 10);
 		_isLeft = false;
 	}
 
@@ -78,24 +78,27 @@ void Doodle::Update()
 		if (KEYMANAGER->IsOnceKeyDown(VK_SPACE))
 		{
 			_onGround = false;
-			_gravity = -60.0f;
+			_gravity = -70.0f;
 		}
 	}
 
-	auto _platformBlock = OBJECTMANAGER->FindObjects(ObjectType::Block, L"PlatformBlock");	//FindObject는 GameObject 포인터 타입 리턴, FindObjects는 GameObject 포인터 타입 벡터 리턴
+	auto _platformBlock = OBJECTMANAGER->FindObjects(ObjectType::Block, L"Block");	//FindObject는 GameObject 포인터 타입 리턴, FindObjects는 GameObject 포인터 타입 벡터 리턴
 
 	for (auto _block : _platformBlock) {
 		/*if (pObj->GetActive())
 			continue;*/
 
-		auto pReinforcedBulletObj = dynamic_cast<PlatformBlock*>(_block);
+		auto collideBlock = dynamic_cast<PlatformBlock*>(_block);
 
 		if (_doodlePos.x > _block->GetPosition().x - _block->GetSize().x / 2 && _doodlePos.x < _block->GetPosition().x + _block->GetSize().x / 2)	//두들의 x좌표가 블록의 x 범위 내부에 있다면
 		{
 			if (_doodlePos.y > _block->GetPosition().y - _block->GetSize().y / 2 && _doodlePos.y < _block->GetPosition().y + _block->GetSize().y / 2)
 			{
-				_gravity = -60.0f;
-				//_gravity = -60.0f;
+				if (_gravity > 0)
+				{
+					_gravity = -70.0f;
+					collideBlock->SetActive(false);
+				}
 			}
 		}
 	}	
@@ -111,17 +114,19 @@ void Doodle::Render()
 	if (_isLeft)
 	{
 		_doodleLeft->Render(_rect.GetCenter());	// 일반 이미지
+		//_doodleLeft->AniRender(_rect.GetCenter() + Vector2(0, -15), _doodleAnimation, 2.0f);
 	}
 	else
 	{
 		_doodleRight->Render(_rect.GetCenter());	// 일반 이미지
+		//_doodleRight->AniRender(_rect.GetCenter() + Vector2(0, -15), _doodleAnimation, 2.0f);
 	}
 
 	//_doodleRight->Render(_rect.GetCenter());	// 일반 이미지
 	//_doodleImage->AniRender(_rect.GetCenter() + Vector2(0, -15), _doodleAnimation, 2.0f);
 	//_doodleImage->FrameRender(_rect.GetCenter(), 0, 0);
 	//_playerImage->Render(_rect.GetCenter());	// 일반 이미지
-	_D2DRenderer->RenderText(10, 100, L"두들 위치 : " + to_wstring(_doodlePos.x) + L" " + to_wstring(_doodlePos.y), 30);
+	//_D2DRenderer->RenderText(10, 100, L"두들 위치 : " + to_wstring(_doodlePos.x) + L" " + to_wstring(_doodlePos.y), 30);
 }
 
 void Doodle::Move(Vector2 moveDirection, float speed)

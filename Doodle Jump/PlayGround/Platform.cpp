@@ -17,9 +17,10 @@ void Platform::Init()
 {
 	_name = L"Platform";
 	_position = Vector2(WINSIZEX / 2, WINSIZEY - 20);
-	_size = Vector2(WINSIZEX, 15);
+	_size = Vector2(WINSIZEX, 5);
 	_rect = RectMakePivot(_position, _size, Pivot::Center);	// 히트박스
 	_gravity = 1.0f;
+	_active = true;
 }
 
 void Platform::Release()
@@ -35,12 +36,17 @@ void Platform::Render()
 {
 	_D2DRenderer->FillRectangle(_rect, D2DRenderer::DefaultBrush::White);			// 채우기
 	_D2DRenderer->DrawRectangle(_rect, D2DRenderer::DefaultBrush::Black, 1.0f);		// 라인
+	//_D2DRenderer->RenderText(10, 500, L"크기 : " + to_wstring(_blockImage1->GetSize().x) + L" " + to_wstring(_blockImage1->GetSize().y), 30);
 }
 
 PlatformBlock::PlatformBlock()
 {
-	//Init();
-	Init(rand() % 1401 - 700);
+	Init();
+}
+
+PlatformBlock::PlatformBlock(int a)
+{
+	Init(a);
 }
 
 PlatformBlock::~PlatformBlock()
@@ -50,26 +56,28 @@ PlatformBlock::~PlatformBlock()
 
 void PlatformBlock::Init()
 {
-	//srand((unsigned int)time(NULL));
-
 	_name = L"Block";
-	_position = Vector2(700, 600);
-	_size = Vector2(175, 25);
+	_position = Vector2(0, 300);
+	_size = Vector2(75, 22);
 	_rect = RectMakePivot(_position, _size, Pivot::Center);	// 히트박스
 	_gravity = 1.0f;
+	_active = true;
+
+	_blockImage = IMAGEMANAGER->AddImage(L"Block", L"Resources/block_green.png");
 }
 
 void PlatformBlock::Init(int a)
 {
-	_name = L"PlatformBlock";
-	_position = Vector2(rand() % 301 + 156, a * 3);
-	//_position = Vector2(rand() % 501 + 312, 600);
-	//_position = Vector2(700, 600);
-	_size = Vector2(175, 25);
+	_name = L"Block";
+	_position = Vector2(rand() % 473 + 20, a);
+	_size = Vector2(75, 22);
 	_rect = RectMakePivot(_position, _size, Pivot::Center);	// 히트박스
 	_gravity = 1.0f;
+	_active = true;
 
-	//_blockImage = IMAGEMANAGER->AddImage(L"Doodle", L"Resources/doodle_left.png");
+	_blockImage = IMAGEMANAGER->AddImage(L"Block", L"Resources/block_green.png");
+	
+	//_blockImage->SetScale(0.5f);
 
 	//_blockAnimation = new Animation();
 	//_blockAnimation->Init(_blockImage->GetWidth(), _blockImage->GetHeight(), _blockImage->GetFrameSize().x, _blockImage->GetFrameSize().y);
@@ -85,14 +93,16 @@ void PlatformBlock::Release()
 void PlatformBlock::Update()
 {
 	//_blockAnimation->FrameUpdate(TIMEMANAGER->GetElapsedTime());
+	//Move(Vector2(0, 10), 10);
 }
 
 void PlatformBlock::Render()
 {
-	_D2DRenderer->FillRectangle(_rect, D2DRenderer::DefaultBrush::White);			// 채우기
-	_D2DRenderer->DrawRectangle(_rect, D2DRenderer::DefaultBrush::Black, 2.0f);		// 라인
-	//_D2DRenderer->RenderText(200, 200, L"블록 위치 : " + to_wstring(GetPosition().x) + L" " + to_wstring(GetPosition().y), 30);
-	//_blockImage->AniRender(_rect.GetCenter() + Vector2(0, -15), _blockAnimation, 2.0f);
+	//_D2DRenderer->FillRectangle(_rect, D2DRenderer::DefaultBrush::White);			// 채우기
+	//_D2DRenderer->DrawRectangle(_rect, D2DRenderer::DefaultBrush::Black, 2.0f);		// 라인
+	
+	//_D2DRenderer->RenderText(10, 500, L"크기 : " + to_wstring(_blockImage->GetSize().x) + L" " + to_wstring(_blockImage->GetSize().y), 30);
+	_blockImage->Render(_rect.GetCenter());
 }
 
 void PlatformBlock::Move(Vector2 moveDirection, float speed)

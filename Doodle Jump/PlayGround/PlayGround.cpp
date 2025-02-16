@@ -3,9 +3,12 @@
 #include "IEvent.h"
 #include "Bullet.h"
 #include "TestScene.h"
+#include <string>
 
 HRESULT PlayGround::Init()
 {
+	srand((unsigned int)time(NULL));
+
 	GameNode::Init(true);
 
 	/*Player* player = new Player();
@@ -20,15 +23,18 @@ HRESULT PlayGround::Init()
 	SCENEMANAGER->AddScene(L"TestScene5", new TestScene5());
 	*/
 
+	//캐릭터
 	Doodle* doodle = new Doodle();
 	OBJECTMANAGER->AddObject(ObjectType::Doodle, doodle);
 
+	//시작 땅
 	Platform* platform = new Platform();
 	OBJECTMANAGER->AddObject(ObjectType::Platform, platform);
 
+	//블록
 	for (int i = 0; i < 50; i++)
 	{
-		PlatformBlock* block = new PlatformBlock();
+		PlatformBlock* block = new PlatformBlock(rand()% (WINSIZEY - 100));
 		OBJECTMANAGER->AddObject(ObjectType::Block, block);
 	}
 	
