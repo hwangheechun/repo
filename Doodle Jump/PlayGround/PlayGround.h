@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Doodle.h"
 #include "Platform.h"
+#include "Scene.h"
 #include "Obstacle.h"
 
 #include "EventManager.h"

@@ -69,7 +69,7 @@ void PlatformBlock::Init()
 void PlatformBlock::Init(int a)
 {
 	_name = L"Block";
-	_position = Vector2(rand() % 473 + 20, a);
+	_position = Vector2(rand() % 473 + 20, a);	
 	_size = Vector2(75, 22);
 	_rect = RectMakePivot(_position, _size, Pivot::Center);	// 히트박스
 	_gravity = 1.0f;

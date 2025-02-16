@@ -18,13 +18,9 @@ public:
 	void Move(Vector2 moveDirection, float speed);
 	void MoveAngle(float angle, float speed);
 
-	Vector2 _direction;
-	Vector2 GetDirection() { return _direction; };
-
-	FloatRect _gaugeRect;
 	Vector2 GetSize() { return _size; };
 
-	Image* _blockImage1;
+	//Image* _blockImage1;
 };
 
 class PlatformBlock : public GameObject
@@ -35,6 +31,7 @@ public:
 	virtual ~PlatformBlock();
 
 	void Init() override;
+	void Init(int a);
 	void Release() override;
 	void Update() override;
 	void Render() override;
@@ -43,15 +40,7 @@ public:
 	float _gravity;
 
 	void Move(Vector2 moveDirection, float speed);
-	void MoveAngle(float angle, float speed);
-
-	Vector2 _direction;
-	Vector2 GetDirection() { return _direction; };
-
-	FloatRect _gaugeRect;
-	Vector2 GetSize() { return _size; };
-
-	void Init(int a);
+	void MoveAngle(float angle, float speed);	
 
 	Image* _blockImage;
 	//Animation* _blockAnimation;

@@ -22,6 +22,8 @@ HRESULT PlayGround::Init()
 	SCENEMANAGER->AddScene(L"TestScene4", new TestScene4());
 	SCENEMANAGER->AddScene(L"TestScene5", new TestScene5());
 	*/
+	/*BackGround* background = new BackGround();
+	SCENEMANAGER->AddScene(L"BackGround", background);*/
 
 	//블록
 	for (int i = 0; i < 50; i++)

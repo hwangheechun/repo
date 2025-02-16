@@ -20,20 +20,19 @@ public:
 
 	FloatRect _gaugeRect;
 
-	Image* _playerImage;
-	Animation* _playerAnimation;
+	Vector2 _doodlePos;
+	bool isUp;
 
+	//중력 관련
 	float _gravity;
 	GameObject* _ground;
 	bool _onGround;
 	GameObject* _block;
 
+	//이미지 관련
 	bool _isLeft;
 	Image* _doodleLeft;
 	Image* _doodleRight;
 	Animation* _doodleAnimation;
-
-	Vector2 _doodlePos;
-	bool isUp;
 };
 

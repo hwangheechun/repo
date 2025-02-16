@@ -51,13 +51,19 @@ void Doodle::Update()
 
 	if (KEYMANAGER->IsStayKeyDown(VK_LEFT))
 	{
-		Move(Vector2(-20, 0), 10);
-		_isLeft = true;
+		if (_position.x > 0)
+		{
+			Move(Vector2(-20, 0), 10);
+			_isLeft = true;
+		}
 	}
 	if (KEYMANAGER->IsStayKeyDown(VK_RIGHT))
 	{
-		Move(Vector2(20, 0), 10);
-		_isLeft = false;
+		if (_position.x < WINSIZEX)
+		{
+			Move(Vector2(20, 0), 10);
+			_isLeft = false;
+		}
 	}
 
 	if (KEYMANAGER->IsStayKeyDown(VK_SPACE))
@@ -125,7 +131,7 @@ void Doodle::Render()
 	//_doodleImage->AniRender(_rect.GetCenter() + Vector2(0, -15), _doodleAnimation, 2.0f);
 	//_doodleImage->FrameRender(_rect.GetCenter(), 0, 0);
 	//_playerImage->Render(_rect.GetCenter());	// 일반 이미지
-	//_D2DRenderer->RenderText(10, 100, L"두들 위치 : " + to_wstring(_doodlePos.x) + L" " + to_wstring(_doodlePos.y), 30);
+	_D2DRenderer->RenderText(10, 10, L"Score : " + to_wstring(- ((int)_doodlePos.y - 1000) / 100), 20);
 }
 
 void Doodle::Move(Vector2 moveDirection, float speed)
